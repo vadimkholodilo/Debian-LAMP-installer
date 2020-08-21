@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$(whoami)" != "root" ]; then
+echo "This script must be run under root"
+exit 1
+fi
+
 source ./exports.sh # This script sets important environment variables
 echo "Welcome to Wordpress installer"
 echo "This program will prepare your server to run Wordpress"
