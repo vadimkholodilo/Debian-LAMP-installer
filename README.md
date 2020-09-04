@@ -3,6 +3,11 @@ This repo contains scripts to install LAMP-server on Debian-based systems.
 I thought about doing something cross-platform, but there are a lot of platform-specific details. So, it is better and easier to create several repositories. When they are ready, I will include links to them as well.
 LAMP stands for Linux, Apache, PHP, and MySQL.
 However, MySQL is replaced with MariaDB. I just like MariaDB for its better performance and some features which are not available in the community edition of MySQL.
+## Folder structure
+In the root directory you will find scripts which can be run directly.
+inc folder contains some scripts which are used by other scripts. Do not run anything from this folder.
+virtual_host contains scripts which are used to create virtual hosts in NGINX or Apache. They can be run directly.
+Each folder also contains its own readme.md where you will find more details.
 
 # How to use it
 There will be no interractive installer to keep it simple and reusable.
