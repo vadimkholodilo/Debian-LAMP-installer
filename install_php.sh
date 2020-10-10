@@ -1,4 +1,5 @@
 #!/bin/bash
+source ./init.sh
 echo "Installing php"
 echo "Adding php repository which contains the latest php"
 add-apt-repository -y ppa:ondrej/php
