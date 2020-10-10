@@ -11,14 +11,13 @@ Each folder also contains its own readme.md where you will find more details.
 
 # How to use it
 There will be no interractive installer to keep it simple and reusable.
-However, there are some important steps which you need to do to make everything working properly:
-1. Edit exports.sh. You need to set your system (Debian or Ubuntu) and system subname. For example, for Ubuntu it might be trusted. For Debian it might be Buster.
-2. Run ./exports.sh to set environment variables.
-3. Run sudo ./install_common_packages.sh
+Before running any script, edit config.sh. Set PLATFORM_NAME to "debian" or "ubuntu" (With quotes)
+ All scripts  have descriptive names, so you should not have any issues.
+Note, remember that NGINX has to be installed before Apache, because they both take the same port.
+Apache installation script will assign another port to Apache if it finds that port 80 is already busy.
+If you forgot about this. It is not a problem. You can edit the following file /etc/apache2/ports.conf. Change 80 to any free port.
 
-When steps above are performed, feel free to run any script which you need. They have descriptive names, so you should not have any issues.
-Remember that NGINX must be installed after Apache, because Apache takes port 80 and NGINX does the same.
-Run ./configure_ports.sh if you plan to install NGINX after Apache.
+
 
 # How to contact me
 If you have any issues, please, create an issue on Github, if you want to discuss something with me or you want to offer me a job (I'm currently looking for one), contact me using my email: vadimkholodilo@gmail.com
