@@ -3,13 +3,14 @@
 # determining a port which Apache can listen on
 # Apache can be installed with NGINX, so to make everything working properly, we need to make sure that Apache will use a port which is not already used
 # ports. Feel free to modify this list according to your needs
-ports=(80, 8000, 8080)
+ports=(80 8000 8080)
 port=-1 # If after for loop this variable is still -1, it means that all ports in the list are busy
-for p in $ports[@]
+for p in ${ports[@]}
 do
 lsof -i:$p > /dev/null
-if [ $? -eq 0 ]; then
-port=p
+if [ $? -eq 1 ]; then
+port=$p
+break
 fi
 done
 if [ $port -eq -1 ]; then
