@@ -36,7 +36,7 @@ jobs:
 
       # Installs MariaDB
       - name: Installing MariaDB
-        run: sudo ./install_maria_db.sh
+        run: sudo ./install_mariadb.sh
 
       # Installs NGINX
       - name: Installing PHP
