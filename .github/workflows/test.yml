@@ -1,0 +1,33 @@
+# This action tests installation of all components to make sure that everything works properly
+
+name: Test
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+
+      # Sets permissions for all executables
+      - name: Setting permissions
+        run: chmod +x *.sh
+
+      # Installs NGINX
+      - name: Installing NGINX
+        run: sudo ./install_nginx.sh
+
+      # Installs Apache
+      - name: Installing Apache
+        run: sudo ./install_apache.sh
+
+      # Installs MariaDB
+      - name: Installing MariaDB
+        run: sudo ./install_mariadb.sh
+
+      # Installs NGINX
+      - name: Installing PHP
+        run: sudo ./install_php.sh
