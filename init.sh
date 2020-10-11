@@ -21,7 +21,3 @@ echo "The following settings will be used: "
 echo "Platform name: ${PLATFORM_NAME},"
 echo "Platform subname: ${PLATFORM_SUBNAME}"
 
-echo "Updating package indexes"
-apt update -y
-echo "Installing software-properties-common. This package is required for adding repositories"
-

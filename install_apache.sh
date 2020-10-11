@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ./init.sh
 # determining a port which Apache can listen on
 # Apache can be installed with NGINX, so to make everything working properly, we need to make sure that Apache will use a port which is not already used
 # ports. Feel free to modify this list according to your needs
