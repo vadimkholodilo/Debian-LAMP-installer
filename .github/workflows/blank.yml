@@ -28,4 +28,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Running the installer
-        run: ./install_all.sh
+        run: sudo ./install_all.sh
