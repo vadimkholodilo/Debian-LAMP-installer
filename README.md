@@ -16,6 +16,12 @@ Before running any script, edit config.sh. Set PLATFORM_NAME to "debian" or "ubu
 Note, remember that NGINX has to be installed before Apache, because they both take the same port.
 Apache installation script will assign another port to Apache if it finds that port 80 is already busy.
 If you forgot about this. It is not a problem. You can edit the following file /etc/apache2/ports.conf. Change 80 to any free port.
+You can also just run sudo ./install_all.sh to install all components in the right order.
+install_all.sh will install the following:
+1. NGINX (The latest stable version)
+2. Apache (The latest available version in Debian's or Ubuntu's repository)
+3. Mariadb (10.5)
+4. PHP (7.4)
 
 
 

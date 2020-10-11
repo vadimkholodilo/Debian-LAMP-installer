@@ -1,7 +1,13 @@
 #!/bin/bash
 echo "Inicialization"
-echo "Exporting variables"
+source ./inc/service.sh
+source ./inc/check_root.sh
 source ./config.sh
+check_root
+if [ $? -eq 1 ]; then
+echo "$0 must be run under root"
+exit 1
+fi
 if [ -z "$PLATFORM_NAME" ]; then
 echo '$PLATFORM_NAME is not set correctly. Check your config.sh file'
 exit 1

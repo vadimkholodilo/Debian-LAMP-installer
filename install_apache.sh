@@ -26,6 +26,6 @@ sed -i "s/80/$port/g" /etc/apache2/ports.conf
 fi
 
 echo "Restarting Apache"
-systemctl restart apache2
+service_do_action restart apache2
 echo "Enabling Apache on boot"
-systemctl enable apache2
+service_do_action enable apache2

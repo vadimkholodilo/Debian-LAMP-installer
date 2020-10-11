@@ -9,8 +9,6 @@ echo "Updating packages"
 apt update
 echo "Installing nginx"
 apt install nginx -y
-echo "Running nginx"
-systemctl start nginx
-echo "Enabling NGINX to start on boot"
-systemctl enable nginx
+service_do_action start nginx
+service_do_action enable nginx
 

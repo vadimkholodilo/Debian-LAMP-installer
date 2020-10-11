@@ -8,7 +8,5 @@ echo "Updating package indexes"
 apt-get update -y
 echo "Installing MariaDB-server"
 apt-get install mariadb-server -y
-echo "Starting mariadb"
-systemctl start mariadb
-echo "Enabling MariaDB on boot"
-systemctl enable mariadb
+service_do_action start mariadb
+service_do_action enable mariadb
