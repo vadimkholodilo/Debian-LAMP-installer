@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-
+      # Checks out scripts
+      - name: Checkout scripts
+        uses: actions/checkout@v2
       # Sets permissions for all executables
       - name: Setting permissions
         run: chmod +x *.sh
